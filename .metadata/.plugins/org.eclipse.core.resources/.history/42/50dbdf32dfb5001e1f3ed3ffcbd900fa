@@ -1,0 +1,14 @@
+package ex03;
+
+public class Exam01 {
+
+	public static void main(String[] args) {
+	     int on = 20;
+	     int tw = 30;
+	     System.out.println("숫자1:"+on);
+	     System.out.println(tw);
+	    System.out.println("합계:" + (on+tw));
+	    System.out.println("평균:" + (float)(on+tw)/2);
+	}
+
+}

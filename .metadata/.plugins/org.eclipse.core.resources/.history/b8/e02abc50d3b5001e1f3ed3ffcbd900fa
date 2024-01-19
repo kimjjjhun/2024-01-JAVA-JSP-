@@ -1,0 +1,12 @@
+package ex03;
+
+public class Exam01 {
+
+	public static void main(String[] args) {
+		int exam = 4000;
+		
+		System.out.println("exam = " + (float)(exam/66.4));
+
+	}
+
+}

@@ -1,0 +1,20 @@
+
+public class Welcome {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("Welcome to Shopping mall");
+		System.out.println("Welcome to Book market!");
+		
+		int days = 10;
+		System.out.println(days); //
+		
+		int speed;
+		speed = 20;
+		system.out.println(speed); //
+		
+		
+
+	}
+
+}

@@ -1,0 +1,36 @@
+
+public class Welcome {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int a = 10;
+		byte b = 2;
+		short s = 6;
+		long l = 125362133223L;
+		System.out.println(a);
+		System.out.println(b);
+		System.out.println(s);
+		System.out.println(l);
+		
+		float f = 65.20298f;
+		double d = 876.765d;
+		System.out.println(f);
+		System.out.println(d);
+		
+		char ch = 'j';
+		char ch2 = 'a';
+		char ch3 = 'v';
+		char ch4 = 'a';
+		System.out.print(ch);
+		System.out.print(ch2);
+		System.out.print(ch3);
+		System.out.print(ch4);
+		
+		String str = "Java";
+		String str2 = "Program";
+		
+		System.out.println(str);
+		System.out.print( str2);
+	}
+
+}

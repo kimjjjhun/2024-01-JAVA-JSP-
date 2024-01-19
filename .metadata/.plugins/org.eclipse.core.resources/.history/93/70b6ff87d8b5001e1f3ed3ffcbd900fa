@@ -1,0 +1,13 @@
+package ex03;
+
+public class Exam01 {
+
+	public static void main(String[] args) {
+		int px = 350;
+		
+		int hour = 350/50;
+		System.out.println(px + (hour));
+
+	}
+
+}

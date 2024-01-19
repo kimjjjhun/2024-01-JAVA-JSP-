@@ -1,0 +1,12 @@
+package ex03;
+
+public class Exam01 {
+
+	public static void main(String[] args) {
+	  
+ int one = 20;
+ int tow = 30;
+ System.out.println(one+two);
+	}
+
+}

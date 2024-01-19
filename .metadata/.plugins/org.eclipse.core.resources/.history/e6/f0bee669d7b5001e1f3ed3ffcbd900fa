@@ -1,0 +1,15 @@
+package ex03;
+
+public class Exam01 {
+
+	public static void main(String[] args) {
+		int exam = 5000;
+		
+		int hour = exam/3600;
+		int min = (exam%3600)/60;
+		int second = (exam%3600)%60;
+		System.out.println(hour "시간");
+
+	}
+
+}

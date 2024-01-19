@@ -1,0 +1,11 @@
+package ex03;
+
+public class Exam01 {
+
+	public static void main(String[] args) {
+	     int on = 20;
+	     int tw = 30;
+	    System.out.println("합계:" + (on+tw));
+	}
+
+}
