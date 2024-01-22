@@ -1,0 +1,19 @@
+package ex03;
+
+import java.util.Scanner;
+
+public class For01 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int sum= 0;
+        System.out.println("5개의 숫자를 입력하세요.");
+        for (int n = 1; n <= 5; n++) {
+        	sum+=a;
+
+		}
+        System.out.println("합계:" + sum);
+	}
+
+}

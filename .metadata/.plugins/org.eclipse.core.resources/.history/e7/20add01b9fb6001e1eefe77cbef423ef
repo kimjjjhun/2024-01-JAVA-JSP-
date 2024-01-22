@@ -1,0 +1,31 @@
+package ex03;
+
+import java.util.Scanner;
+
+public class Scanner04 {
+
+	public static void main(String[] args) {
+	  Scanner sc = new Scanner(System.in);
+	  
+	  System.out.println("나이를 입력하세요.");
+	  
+	  int age = sc.nextInt(20);
+	  
+	  if (age => 20) {
+		  System.out.println("성인입니다.");
+	  }
+	  if (age < 20) {
+		  System.out.println("미성년자입니다.");
+	  }
+	  
+	  else(age < 20) {
+	  
+	  System.out.println("프로그램 종료");
+	  }
+	  
+	  
+	  
+	
+	}
+
+}

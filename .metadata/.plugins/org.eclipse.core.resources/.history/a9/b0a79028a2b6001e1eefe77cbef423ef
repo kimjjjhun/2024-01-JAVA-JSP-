@@ -1,0 +1,20 @@
+package ex03;
+
+import java.util.Scanner;
+
+public class Scanner04 {
+
+	public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+	System.out.println("성적입력:");
+	int = sc.nextInt();
+	
+    
+	
+	
+	
+	
+	
+    	
+	}
+}

@@ -1,0 +1,22 @@
+package ex03;
+
+import java.util.Scanner;
+
+public class ex10 {
+
+	public static void main(String[] args) {
+		try (Scanner sc = new Scanner(System.in)) {
+			int a = sc.nextInt();
+			System.out.println("금액을 입력하세요:");
+			System.out.println("본인의 예금:" + a);
+			System.out.println("본인의 출금:" + a);
+			System.out.println("본인의 잔고:" + a);
+		}
+		
+		
+		
+		
+
+	}
+
+}

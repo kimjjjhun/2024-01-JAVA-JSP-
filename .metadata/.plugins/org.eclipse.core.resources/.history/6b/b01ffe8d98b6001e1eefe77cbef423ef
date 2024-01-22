@@ -1,0 +1,23 @@
+package ex02;
+
+import java.util.Scanner;
+
+import org.graalvm.compiler.graph.Node.Input;
+
+public class Scanner01 {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("숫자1:");
+		int a = sc.nextInt(); 
+		System.out.println("숫자2:");
+		int b = sc.nextInt();
+		System.out.println("숫자1:" a);
+		System.out.println("숫자2:" b);
+	    
+		
+		
+	}
+
+}

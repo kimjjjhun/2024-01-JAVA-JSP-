@@ -1,0 +1,27 @@
+package ex03;
+
+import java.util.Scanner;
+
+public class For01 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+        int sum = 0;
+        int sum1 = 0;
+		for (int n = 1; n <= 100; n++) {
+			System.out.println(n/3);
+			
+				
+			
+			}
+		
+			
+	
+		
+		
+		
+		}
+		
+		
+	}
+
