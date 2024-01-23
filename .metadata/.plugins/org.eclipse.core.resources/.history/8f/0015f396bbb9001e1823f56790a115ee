@@ -1,0 +1,27 @@
+package ex04;
+
+public class 로또 {
+
+	public static void main(String[] args) {
+		// 로또가 1~45 숫자 중에서 랜덤하게 6개 추출
+		
+		int lotto = 0;
+		int[] num = new int[7];
+		for (int i = 0; i < num.length; i++) {
+		int number = (int)Math.random();
+		num[i] = number;
+        System.out.println("로또번호추첨 : " + num[i]);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	}
+}

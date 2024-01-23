@@ -1,0 +1,14 @@
+package ex03;
+
+import java.util.Scanner;
+
+public class For1 {
+
+	public static void main(String[] args) {
+		
+		System.out.println("---------------------------");
+		System.out.println("1.예금|\t");
+		System.out.println();
+	}
+
+}

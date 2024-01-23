@@ -1,0 +1,36 @@
+package ex03;
+
+import java.util.Scanner;
+
+public class dowhile02 {
+
+	public static void main(String[] args) {
+		
+		int input, answer;
+		input= answer = 0;
+		
+		answer = (int)(Math.random()*100)+1;
+		
+		Scanner sc = new Scanner(System.in);
+		do {
+			
+             System.out.println("1과 100사이의 정수를 입력하세요!!");
+             
+		} while(input != answer);
+		
+		
+		
+		
+		
+		Math.random();
+		
+		
+		System.out.println( (int)(Math.random()*100)+1);
+		
+		
+		
+		
+
+	}
+
+}

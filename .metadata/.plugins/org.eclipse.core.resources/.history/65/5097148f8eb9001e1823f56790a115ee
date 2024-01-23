@@ -1,0 +1,19 @@
+package ex03;
+
+public class dowhile02 {
+
+	public static void main(String[] args) {
+		
+		int input, answer;
+		input= answer = 0;
+		
+		Math.random();
+		System.out.println( Math.random());
+		
+		
+		
+		
+
+	}
+
+}
