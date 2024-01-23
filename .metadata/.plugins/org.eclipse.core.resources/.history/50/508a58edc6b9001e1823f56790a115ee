@@ -6,7 +6,7 @@ public class 로또 {
 		// 로또가 1~45 숫자 중에서 랜덤하게 6개 추출
 		
 		int[] lotto = new int[6];
-		boolean flag;
+		boolean flag = false;
 		
 		
 		for(int j=0; j<5; j++) {   // 몇번 반복할것인지

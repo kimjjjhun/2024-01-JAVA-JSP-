@@ -6,6 +6,11 @@ public class 연습장 {
 
 	public static void main(String[] args) {
 		
+		
+	
+		//int형 배열 생성후 랜덤(1~100)이용해서 배열 크기 10값 저장
+				//그 배열 총점.평균 구하기
+		// 로또가 1~45 숫자 중에서 랜덤하게 6개 추출
 	
 		int[] lotto = new int[45];
 		// 로또 변수 45개를 생성
@@ -13,7 +18,7 @@ public class 연습장 {
 			lotto[i] = i+1;
 		//1~45의 숫자를 순서대로 저장
 		for(int i=0; i<1000; i++) {
-			int num = (int)(Math.random()*44)+1;
+			int num = (int)(Math.random()*45)+1;
 			// 1~45의 숫자를 랜덤하게 생성
 			int tmp = lotto[0];
 			// 변수 tmp는 로또변수번호 0번에 저장한다.

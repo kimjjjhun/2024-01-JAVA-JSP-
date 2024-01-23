@@ -1,6 +1,6 @@
 package ex04;
 
-public class 로또 {
+public class 로또2 {
 
 	public static void main(String[] args) {
 		// 로또가 1~45 숫자 중에서 랜덤하게 6개 추출
