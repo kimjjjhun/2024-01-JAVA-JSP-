@@ -1,0 +1,47 @@
+package ex03;
+
+public class Phone {
+
+	private String model;
+	private String color;
+    
+	
+	public Phone() {
+	
+		System.out.println("Phone");
+	}
+	
+
+	public Phone(String model, String color) {
+	
+	    this.model = model;
+	    this.color = color;
+		System.out.println("Phone");
+	
+	}
+	
+	public void color() {
+		System.out.println();
+	}
+	
+	
+	public void bell() {
+		System.out.println("전화 벨이 울린다.");
+	}
+	
+	public void sendVoice(String message) {
+		System.out.println("자 신 :" + message);
+	}
+	
+	public void receiveVoice(String message) {
+		System.out.println("상대방 :" + message);
+	}
+	public void hangUp() {
+		System.out.println("전화를 끊습니다.");
+	}
+	
+	@Override
+	public String toString() {
+		return "phone [model=" + model + ", color=" + color + "]";
+	}
+}

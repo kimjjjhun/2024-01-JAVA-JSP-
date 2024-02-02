@@ -3,5 +3,21 @@
     <fullyQualifiedTypeName name="org.graalvm.compiler.asm.amd64.AMD64Address.Scale"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="int"/>
+    <fullyQualifiedTypeName name="java.lang.Math"/>
+    <fullyQualifiedTypeName name="javax.swing.plaf.basic.BasicInternalFrameTitlePane.SystemMenuBar"/>
+    <fullyQualifiedTypeName name="ex05.Car"/>
+    <fullyQualifiedTypeName name="ex06.Person"/>
+    <fullyQualifiedTypeName name="ex01.NewestPhone"/>
+    <fullyQualifiedTypeName name="ex01.phone"/>
+    <fullyQualifiedTypeName name="java.util.Set"/>
+    <fullyQualifiedTypeName name="ex01.SmartPhone"/>
+    <fullyQualifiedTypeName name="ex03.SmartPhone"/>
+    <fullyQualifiedTypeName name="ex04.EBook"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="ex02.Animal"/>
+    <fullyQualifiedTypeName name="ex02.Bird"/>
+    <fullyQualifiedTypeName name="ex02.A"/>
+    <fullyQualifiedTypeName name="ex02.Controller"/>
 </qualifiedTypeNameHistroy>
