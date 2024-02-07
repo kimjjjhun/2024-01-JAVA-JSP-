@@ -1,16 +1,8 @@
 package ex02;
 
 public class Cat extends Animal{
-
-	
-	
-	
-
-	Cat(){
-		
-	}
-	public void makeSound(){
-		System.out.println("Cat : 야옹");
-		
+	@Override
+	void makeSound() {
+		System.out.println("야옹");
 	}
 }

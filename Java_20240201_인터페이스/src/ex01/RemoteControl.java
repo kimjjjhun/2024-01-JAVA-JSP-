@@ -2,6 +2,9 @@ package ex01;
 
 public interface RemoteControl {
 
-	public void turnOn();
+//	public static final int MAX = 100;
 	
+	int MAX = 100;
+	
+	public void turnOn();
 }

@@ -1,5 +1,7 @@
 package ex04;
-
+/*
+ * 우빈 스피커
+ */
 public class Ga {
     
 	   public Ga() {}

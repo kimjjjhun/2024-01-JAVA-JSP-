@@ -1,18 +1,13 @@
 package ex03;
 
-public class Novel extends Book{
+public class Novel extends Book {
 	
-	       private String Novel;
-
-	public Novel(String title, String author, int publishYear) {
-		super(title, author, publishYear);
-		
-		
+	public Novel(String title, String author, int year) {
+		super(title, author, year);
 	}
-
-String getDetails() {
-		
+	
+	@Override
+	String getDetails() {
 		return super.getDetails() + " : 장르";
 	}
-	
 }

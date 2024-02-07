@@ -1,11 +1,12 @@
 package ex03;
 
-public class NewestPhone extends phone{
-	
-	
-	private boolean wifi;
+public class NewestPhone extends Phone{
 
+	private boolean wifi;
 	
+	public NewestPhone() {
+		System.out.println("NewestPhone");
+	}
 	public void internet() {
 		System.out.println("인터넷 연결!!");
 	}

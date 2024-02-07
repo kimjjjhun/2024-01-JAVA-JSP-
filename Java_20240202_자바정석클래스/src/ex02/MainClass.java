@@ -7,7 +7,6 @@ public class MainClass {
 		doWork(new A());
 		doWork(new B());
 		doWork(new C());
-
 	}
 	
 	static void doWork(A a) {
@@ -21,7 +20,5 @@ public class MainClass {
 		}else {
 			a.fa();
 		}
-		
 	}
-
 }

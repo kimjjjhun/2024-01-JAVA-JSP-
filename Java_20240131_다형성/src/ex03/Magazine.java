@@ -1,14 +1,13 @@
 package ex03;
 
 public class Magazine extends Book{
-
-public Magazine(String title, String author, int publishYear) {
-		super(title, author, publishYear);
-		
+	
+	public Magazine(String title, String author, int year) {
+		super(title, author, year);
 	}
-
-String getDetails() {
-		
+	
+	@Override
+	String getDetails() {
 		return super.getDetails() + " : 발행주기";
 	}
 }
