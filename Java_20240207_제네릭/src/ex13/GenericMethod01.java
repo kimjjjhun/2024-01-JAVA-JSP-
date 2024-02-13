@@ -1,4 +1,4 @@
-package ex12;
+package ex13;
 
 class Box<T>{   //T --> String
 	private T obj;

@@ -33,8 +33,8 @@ public class GenericMethod01 {
 	Box<String> sbox = new Box();
 	sbox.set("Korea");	
 	
-	Unboxer.<String>peekBox(sbox);
-	Unboxer.<String>openBox(sbox);
+	Unboxer.<String>peekBox(sbox);                // String 을 생략할수도 넣을수도있다.  문장이 간결해질수있음 
+	Unboxer.openBox(sbox);
 
 
 	
