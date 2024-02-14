@@ -9,7 +9,6 @@
     <fullyQualifiedTypeName name="ex06.Person"/>
     <fullyQualifiedTypeName name="ex01.NewestPhone"/>
     <fullyQualifiedTypeName name="ex01.phone"/>
-    <fullyQualifiedTypeName name="java.util.Set"/>
     <fullyQualifiedTypeName name="ex01.SmartPhone"/>
     <fullyQualifiedTypeName name="ex03.SmartPhone"/>
     <fullyQualifiedTypeName name="ex04.EBook"/>
@@ -29,4 +28,13 @@
     <fullyQualifiedTypeName name="ex01.B"/>
     <fullyQualifiedTypeName name="javax.swing.Box"/>
     <fullyQualifiedTypeName name="ex09.Box"/>
+    <fullyQualifiedTypeName name="ex01.ArrayListCollection"/>
+    <fullyQualifiedTypeName name="java.util.LinkedList"/>
+    <fullyQualifiedTypeName name="java.lang.Iterable"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.HashSet"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="java.util.Set"/>
+    <fullyQualifiedTypeName name="java.util.Iterator"/>
 </qualifiedTypeNameHistroy>
