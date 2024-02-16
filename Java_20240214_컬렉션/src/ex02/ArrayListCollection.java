@@ -9,7 +9,7 @@ public class ArrayListCollection {
 		
 		//ArrayList<String> list = new ArrayList<String>();
 		LinkedList<String> list = new LinkedList<String>();
-		
+		// ArrayList 와 다른 LinkedList 로 새로운 컬렉션 생성
 		
 		
 		//문자열 인스턴스 저장

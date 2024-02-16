@@ -11,6 +11,8 @@ public class ArrayListCollection {
 		
 		//ArrayList<String> list = new ArrayList<String>();
 		//LinkedList<String> list = new LinkedList<String>();
+		
+		
 		//ArrayList와 LinkedList 두 클래스 상위 클래스인 List사용하자.
 		List<String> list = new ArrayList<String>();
 		
