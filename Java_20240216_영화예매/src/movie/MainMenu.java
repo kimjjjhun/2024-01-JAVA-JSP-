@@ -1,5 +1,12 @@
 package movie;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.List;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+@AllArgsConstructor
+@Getter
 public class MainMenu extends AbstractMenu {
 	//새로운 생성자 메인메뉴를 만들고 그 안에 초기값은 널값을 입력
 	//메인메뉴화면에출력할 기본문구를 만들고 final로 값을 못바꾸게 지정
@@ -23,10 +30,15 @@ public class MainMenu extends AbstractMenu {
 	@Override
 	public Menu next() {                   //추상클래스에게 물려받은 인터페이스메뉴 추상메소드 menu next 구현
 		switch(sc.nextLine()) {           // switch 반복문으로 입력값을 받고 반복하거나 빠져나감
-		
+		case"1":
+			reserve(); //영화 예매하기
+			return this;
 		case"2":
 			checkReservation(); // 예매확인하기
 			return this; // 메인 메뉴 객체 반환(다시 메인메뉴가 나타난다.)
+		case"3":
+			cancelReservation();  // 예매취소
+			return this;
 		case"4":
 			if(! checkAdminPassword()) {        //입력받은 비밀번호와 설정한 비밀번호 값이 일치하니? 물어봄
 				System.out.println("비밀번호가 틀렸습니다.");  // 틀릴경우 출력하고 메인메뉴주소값으로 돌아감  
@@ -40,18 +52,63 @@ public class MainMenu extends AbstractMenu {
 		}
 	}
 
-	private void checkReservation() {
+	private void reserve() {
+		try {
+		List<Movie> movies = Movie.findAll();    
+		for(Movie movie : movies)                   
+			System.out.println(movie);                     // 영화전체리스트 출력
+		System.out.println("예매할 영화를 선택하세요: ");       // 영화선택문장 출력
+		
+		String movieId = sc.nextLine();
+		Movie movie = Movie.findAll(movieId);       // 영화선택입력 받음
+		
+		
+		ArrayList<Reservation> reservations = Reservation.findMovieId(movieId); //예매된 좌석 현황.
+		
+		Seats seats = new Seats(reservations);
+		
+		seats.show();
+		
+		System.out.println("좌석을 선택하세요(예:A-1): ");
+		String seatName = sc.nextLine();
+		
+		seats.mark(seatName);     // 좌석 예매
+		
+		Reservation reservation = new Reservation(movie.getId(),movie.getTitle(),seatName);
+		
+		reservation.save();
+		
+		
+		
+	}catch (Exception e) {
+		System.out.printf(">> 예매에 실패하였습니다: %s\n",e.getMessage());
+	}
+	}
+
+	private void cancelReservation() {
 		System.out.println("예매번호를 입력하세요: ");
+		
+		Reservation canceled = Reservation.cancel(sc.nextLine());
+		
+		if(canceled == null) {
+			System.out.println("예매 내역이 없습니다.");
+		}else {
+			System.out.printf("%s의 예매가 취소되었습니다.", canceled);
+		}
+	}
+
+	private void checkReservation() {
+		System.out.println("예매번호를 입력하세요: ");    // 메시지 출력
 		try {
 			Reservation reservation = Reservation.FindById(sc.nextLine());
-			
-			if(reservation == null) {
+			//try문으로 예외처리 // 오류가 나올수있기에 try문을 사용
+			if(reservation == null) {                       
 				System.out.println(">> 예매 내역이 없습니다.");
 			}else {
 				System.out.println(">>[확인 완료]\n" + reservation);
 			}
 			
-		}catch(Exception e) {
+		}catch(Exception e) {        // 예외처리로 나올수있는 모든오류는 여기에서 모두 처리해준다.
 			e.printStackTrace();
 		}
 	}

@@ -4,7 +4,6 @@
 <workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1705472212980_1" label="Java Test Sources" name="Java Test Sources"/>
 <workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1707363995620_4" label="11" name="11">
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/BookMarket" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/BreakTime" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Java_20240119_연산자" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Java_20240129_클래스" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Java_20240130_상속" type="4"/>
@@ -14,7 +13,6 @@
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Java_20240205_Exception" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Java_20240206_유용한클래스" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Java_20240207_제네릭" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/first" type="4"/>
 </workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1705472214146_2" label="Window Working Set" name="Aggregate for window 1705472214145"/>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1707363962909_3" label="Multiple Working Sets" name="Aggregate:Java Main Sources:Java Test Sources:">

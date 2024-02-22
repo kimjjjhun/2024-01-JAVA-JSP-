@@ -40,7 +40,7 @@ public class BoxEx02 {
 		
 		Box<Integer> ibox = new Box<Integer>();
 		Box<Double> dbox = new Box<Double>();
-		Box<String> sbox = new Box<String>();
+//		Box<String> sbox = new Box<String>();
 		
 		
 
