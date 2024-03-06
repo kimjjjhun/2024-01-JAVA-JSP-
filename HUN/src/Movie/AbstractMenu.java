@@ -18,7 +18,7 @@ public abstract class AbstractMenu implements Menu{
 
 	@Override
 	public void print() {
-		System.out.println("\n + menuText"); // 메뉴출력문장
+		System.out.println("\n" + menuText); // 메뉴출력문장
 	}
 
 	
