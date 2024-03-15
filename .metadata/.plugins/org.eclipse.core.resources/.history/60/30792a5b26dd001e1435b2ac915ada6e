@@ -1,0 +1,16 @@
+package com.saeyan.controller;
+
+public class MyUtil {
+	
+		//전체페이지
+	public int getPagecount(int numPerPage, int dataCount) {
+		int pageCount = 0;
+		
+		pageCount = dataCount / numPerPage;
+		
+		if (dataCount % numPerPage != 0) {
+			pageCount++;
+		}
+	}
+
+}

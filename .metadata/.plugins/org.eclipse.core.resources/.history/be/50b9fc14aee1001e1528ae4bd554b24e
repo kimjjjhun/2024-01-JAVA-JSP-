@@ -1,0 +1,203 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+  font-family:sans-serif;
+
+}
+
+body {
+  background-image:url('netflixbackground.jpg');
+  background-size: cover;
+}
+
+.joinForm {
+  position:absolute;
+  width:400px;
+  height:400px;
+  padding: 30px 20px;
+  text-align:center;
+  top:40%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  border-radius: 15px;
+}
+
+.textForm {
+  border-bottom: 2px solid #adadad;
+  margin: 30px;
+  padding: 10px 10px;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+    align-items: center;
+}
+
+.textForm select {
+     position:relative;
+    left:40%;
+    transform: translateX(-50%);
+ 	float: left;
+ 	background-image: linear-gradient(125deg,red,yellow);
+    background-position: left;
+    background-size: 200%;
+    width:40%;
+    height:30px;
+    border:none;
+    color:white;
+    font-weight: bold;
+    transition: 0.4s;
+    display:inline; 
+}
+
+
+.textForm select option {
+   position:relative;
+    left:40%;
+    transform: translateX(-50%);
+ 	float: left;
+ 	background-image: linear-gradient(125deg,red,yellow);
+    background-position: left;
+    background-size: 200%;
+    width:40%;
+    height:30px;
+    border:none;
+    color:white;
+    font-weight: bold;
+    transition: 0.4s;
+    display:inline; 
+}
+
+input.name::placeholder {
+	font-size: 20px;
+    color: white;
+    font-weight: 20px;
+}
+input.pw::placeholder {
+    font-size: 20px;
+    color: white;
+    font-weight: 20px;
+}
+input.email::placeholder {
+    font-size: 20px;
+    color: white;
+    font-weight: 20px;
+}
+input.cellphoneNo::placeholder {
+    font-size: 20px;
+    color: white;
+    font-weight: 20px;
+}
+input.nickname::placeholder {
+    font-size: 20px;
+    color: white;
+    font-weight: 20px;
+}
+input.id::placeholder {
+    font-size: 20px;
+    color: white;
+    font-weight: 20px;
+}
+
+.id {
+  width: 100%;
+  border:none;
+  outline:none;
+  color: #636e72;
+  font-size:16px;
+  height:25px;
+  background: none;
+}
+.pw {
+  width: 100%;
+  border:none;
+  outline:none;
+  color: #636e72;
+  font-size:16px;
+  height:25px;
+  background: none;
+}
+.name {
+  width: 100%;
+  border:none;
+  outline:none;
+  color: #636e72;
+  font-size:16px;
+  height:25px;
+  background: none;
+}
+
+.email {
+  width: 100%;
+  border:none;
+  outline:none;
+  color: #636e72;
+  font-size:16px;
+  height:25px;
+  background: none;
+}
+
+.nickname {
+  width: 100%;
+  border:none;
+  outline:none;
+  color: #636e72;
+  font-size:16px;
+  height:25px;
+  background: none;
+}
+
+.cellphoneNo {
+  width: 100%;
+  border:none;
+  outline:none;
+  color: #636e72;
+  font-size:16px;
+  height:25px;
+  background: none;
+}
+
+.btn {
+  position:relative;
+  left:40%;
+  transform: translateX(-50%);
+  margin-bottom: 40px;
+  width:80%;
+  height:40px;
+  background-image: linear-gradient(125deg,red,yellow);
+  background-position: left;
+  background-size: 200%;
+  color:white;
+  font-weight: bold;
+  border:none; 
+  cursor:pointer;
+  transition: 0.4s;
+  display:inline;
+}
+
+.btn:hover {
+  background-position: right;
+  }
+
+ .checkbtn{
+    position:relative;
+    left:40%;
+    transform: translateX(-50%);
+ 	float: left;
+ 	margin-right: 10px;
+ 	background-image: linear-gradient(125deg,red,yellow);
+    background-position: left;
+    background-size: 200%;
+    width:30%;
+    height:30px;
+    border:none;
+    color:white;
+    font-weight: bold;
+    transition: 0.4s;
+    display:inline; 
+}
+.checkbtn:hover {
+  background-position: right;
+  }
+  

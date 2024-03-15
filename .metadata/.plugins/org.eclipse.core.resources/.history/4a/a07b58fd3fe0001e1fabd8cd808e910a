@@ -1,0 +1,21 @@
+package com.saeyan.boardDTO;
+
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
+@Getter
+@Setter
+@ToString
+public class boardDTO {
+	
+	private int num;
+	private String name;
+	private String pwd;
+	private String email;
+	private String subject;
+	private String content;
+	private String ipaddr;
+	private String created;
+	private int hitCount;
+}

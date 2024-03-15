@@ -1,0 +1,29 @@
+<%@page import="java.sql.Connection"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+	request.setCharacterEncoding("UTF-8");
+	String cp = request.getContextPath();
+	
+	//BoardDAO dao = new BoardDAO(DBConn.getConnection());
+	
+	Connection con = DBConn.getConnection();
+	boardDAO dao = new boardDAO(con);
+	
+	MyUtil myUtil = new MyUtil();
+	//get방식으로 넘어온 페이지 번호MyUtil..
+	String pageNum = request.getParameter("pageNum");
+	
+	//첫 시작시 현재페이지 : 1
+	int currentPage = 1;
+	
+	//넘어온 페이지번호가 존재할 경우 현재페이지에 값 넣기
+	if(pagenum != null){
+		currentPage = Integer.parseInt(pageNum);
+	}
+	
+	//검색키 , 검색값
+	String searchKey = request.getParameter("searchKey");
+	String searchValue = request.getParameter("searchValue");
+	
+%>

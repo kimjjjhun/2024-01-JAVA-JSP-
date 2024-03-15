@@ -1,0 +1,15 @@
+package com.saeyan.dao;
+
+import java.sql.Connection;
+
+public class BoardDAO {
+	private static BoardDAO instance = new BoardDAO();
+	
+	private BoardDAO() {}
+	
+	public static BoardDAO getInstance() {
+		return instance;
+	}
+	
+	private static Connection getcConnection;
+}

@@ -1,0 +1,7 @@
+package com.saeyan.dao;
+
+public class BoardDAO {
+	private static BoardDAO instance = new BoardDAO();
+	private BoardDAO() {
+	}
+}

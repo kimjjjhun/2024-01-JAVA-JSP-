@@ -1,0 +1,54 @@
+<%@page import="oracle.jdbc.driver.DBConversion"%>
+<%@page import="java.sql.Connection"%>
+<%@page import="java.net.URLDecoder"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+
+	request.setCharacterEncoding("utf-8");
+	String cp = request.getContextPath();
+	
+	//겟파라미터로 list.jsp에서 num을 가져온다.
+	int num = Integer.parseInt(request.getParameter("num"));
+	//겟파라미터로 list.jsp에서 pageNum을 가져온다.
+	String pageNum = request.getParameter("pageNum");
+	
+	//검색---------------------------
+	String searchKey = request.getParameter("searchKey");
+	String searchValue = request.getParameter("searchValue");
+	
+	if(searchValue != null) {
+		if(request.getMethod().equalsIgnoreCase("GET")){
+			searchValue = URLDecoder.decode(searchValue, "utf-8");
+		}
+	}else {
+		searchKey = "subject";
+		searchValue = "";
+	}
+	
+	Connection conn = DBConn.getConnection();
+	boardDAO dao = new boardDAO(conn);
+	
+	//조회수 증가
+	dao.updateHitCount(num);
+	//글 가져오기
+	boardDTO dto = dao.getReadData(num); // dto에 하나의 데이터가 들어간다.
+	
+	if(dto==null){
+		response.sendRedirect("lists.jsp");
+	}
+	
+	//글 라인수
+	int lineSu = dto.getContent().split("\n").length;
+	dto.setContent(dto.getContent().replace("\n","<br/>"));
+    %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+</body>
+</html>
