@@ -3,58 +3,92 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style type="text/css"></style>
+<link rel="stylesheet" href="join.css?after"/>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 <script type="text/javascript" src="script/member.js"></script>
 </head>
 <body>
-	<h2>회원 가입</h2>
-	<b><font color="red">★</font></b> 표시 항목은&nbsp;<b><font color="red">필수</font></b> 입력 항목입니다.
-	<form action="join.do" method="post" name="frm">
-		<table>
-			<tr>
-				<td>이름</td>
-				<td><input type="text" name="name" size="20">&nbsp;<b><font color="red">★</font></b></td>
-			</tr>
-			<tr>
-				<td>아이디</td>
-				<td><input type="text" name="userid" size="20" id="userid">&nbsp;<b><font color="red">★</font></b>
-					<input type="hidden" name="reid" size="20"> <input
-					type="button" value="중복 체크" onclick="idCheck()"></td>
-			</tr>
-			<tr>
-				<td>암 호</td>
-				<td><input type="password" name="pwd" size="20">&nbsp;<b><font color="red">★</font></b></td>
-			</tr>
-			<tr height="30">
-				<td width="80">암호 확인</td>
-				<td><input type="password" name="pwd_check" size="20">&nbsp;<b><font color="red">★</font></b></td>
-			</tr>
-			<tr>
-				<td>이메일</td>
-				<td><input type="text" name="email" size="20"></td>
-			</tr>
-			<tr>
-				<td>전화번호</td>
-				<td><input type="text" name="phone" size="20"></td>
-			</tr>
-			<tr>
-				<td>등급</td>
-				<td><input type="radio" name="admin" value="0"
-					checked="checked"> 일반회원 <input type="radio" name="admin"
-					value="1"> 관리자</td>
-			</tr>
-			<tr>
-				<td colspan="2" align="center"><input type="submit" value="확인"
-					onclick="return joinCheck()">
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="reset" value="취소">
-				</td>
-			</tr>
-			<tr>
-				<td colspan="2">${message}</td>
-			</tr>
-		</table>
+	<form action="join.do" method="post" name="frm" class="joinForm">
+			 <div class="textForm">
+				<input type="text" name="name" class="name" placeholder="이름입력">
+				<select name="gender" style="float:left;">
+    			<option value="">성별 선택</option>
+    			<option value="남">남</option>
+    			<option value="여">여</option>
+				</select>
+			</div>
+			<div class="textForm">
+				
+				<input type="text" name="nickname" class="nickname" placeholder="닉네임입력">
+			</div>
+				
+			<div class="textForm">
+				<input type="text" name="userid" id="userid" class="id" placeholder="아이디입력">
+				<input type="button" value="중복 체크" onclick="idCheck()" class="checkbtn">
+				<input type="hidden" name="reid"> 
+			</div>
+			<div class="textForm">
+				
+				<input type="password" name="pwd" class="pw" placeholder="비밀번호입력">
+			</div>
+			<div class="textForm">
+				
+				<input type="password" name="pwd_check" class="pw" placeholder="비밀번호재입력">
+			</div>
+			<div class="textForm">
+				
+				<input type="text" name="email" class="email" placeholder="이메일입력">
+			</div>
+			<div class="textForm">
+				<input type="text" name="cellPhone" id="cellPhone" 
+				placeholder="핸드폰번호 입력 예)010-0000-0000" maxlength="13" class="cellphoneNo" />
+			</div>
+			<div class="textForm" hidden="Lev">
+				<p style="float: left">권한
+				<input type="radio" name="admin" value="0" checked="checked"> 일반회원 
+				<input type="radio" name="admin" value="1"> 관리자</p>
+			</div>
+			<div class="textForm">
+				<input type="submit" class="btn" value="S I G N U P" onclick="return joinCheck()">
+			</div>
 	</form>
 </body>
 </html>
+<script>
+// 전화번호 입력시 자동 (-)하이픈 처리 스크립트
+function autoHypenPhone(str){
+    str = str.replace(/[^0-9]/g, '');
+    var tmp = '';
+    if( str.length < 4){
+        return str;
+    }else if(str.length < 7){
+        tmp += str.substr(0, 3);
+        tmp += '-';
+        tmp += str.substr(3);
+        return tmp;
+    }else if(str.length < 11){
+        tmp += str.substr(0, 3);
+        tmp += '-';
+        tmp += str.substr(3, 3);
+        tmp += '-';
+        tmp += str.substr(6);
+        return tmp;
+    }else{              
+        tmp += str.substr(0, 3);
+        tmp += '-';
+        tmp += str.substr(3, 4);
+        tmp += '-';
+        tmp += str.substr(7);
+        return tmp;
+    }
+    return str;
+}
+
+var cellPhone = document.getElementById('cellPhone');
+cellPhone.onkeyup = function(event){
+event = event || window.event;
+var _val = this.value.trim();
+this.value = autoHypenPhone(_val) ;
+}
+</script>
