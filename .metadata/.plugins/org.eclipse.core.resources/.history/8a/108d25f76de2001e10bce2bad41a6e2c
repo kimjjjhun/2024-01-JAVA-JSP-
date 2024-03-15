@@ -1,0 +1,66 @@
+package com.saeyan.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.sql.DataSource;
+
+import com.saeyan.dto.BoardVO;
+
+public class BoardDAO {
+	private static BoardDAO instance = new BoardDAO();
+	
+	private BoardDAO() {}
+	
+	public static BoardDAO getInstance() {
+		return instance;
+	}
+	
+	private static Connection getConnection() {
+		Connection conn = null;
+		try {
+		Context initContext = new InitialContext();
+		Context envContext  = (Context)initContext.lookup("java:/comp/env");
+		DataSource ds = (DataSource)envContext.lookup("jdbc/myoracle");
+		conn = ds.getConnection();
+	} catch(Exception e) {
+		e.printStackTrace();
+	}
+		return conn;
+   }
+	//수정이나 업데이트하는게 아니면 resultSet은 사용하지않는다.
+	private void close(Connection con, Statement stmt) {
+		try {
+			if(stmt != null)stmt.close();
+			if(con != null)con.close();
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	//전체데이터 가져오기
+	public List<BoardVO> selectAllBoards(){
+		List<BoardVO> list = new ArrayList();
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		
+		String sql = "select * from board order by num desc";
+		
+		try {
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			close(con, pstmt, rs);
+		}
+		
+		return list;
+	}
+}

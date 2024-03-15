@@ -1,0 +1,25 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<div id="slideCont" style="position:relative;z-index:1;width:425px;height:70px;top:0px;overflow:hidden;">
+<div id="slideA" style="position:absolute;z-index:1;top:0px;left:0px;width:850px;height:60px;overflow:hidden;">
+<div style="float:left" id="innerSlideA">
+<a href="http://www.webmadang.net/"><img src="http://www.webmadang.net/main/logo6.gif" border="0"></a>
+<a href="http://www.webmadang.net"><img src="http://www.webmadang.net/main/logo7.gif"  border="0"></a>
+<a href="http://www.webmadang.net/"><img src="http://www.webmadang.net/main/logo8.gif"  border="0"></a>
+</div>
+<div id="slideB" style="position:relative;z-index:1;top:0px;left:0px;width:425px;height:60px;overflow:hidden;">
+<a href="http://www.webmadang.net/"><img src="http://www.webmadang.net/main/logo6.gif" border="0"></a>
+<a href="http://www.webmadang.net"><img src="http://www.webmadang.net/main/logo7.gif"  border="0"></a>
+<a href="http://www.webmadang.net/"><img src="http://www.webmadang.net/main/logo8.gif"  border="0"></a>
+</div>
+</div>
+</div>
+</body>
+</html>

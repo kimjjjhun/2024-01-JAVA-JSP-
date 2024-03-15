@@ -1,0 +1,5 @@
+package com.saeyan.controller.action;
+
+public interface Action {
+
+}

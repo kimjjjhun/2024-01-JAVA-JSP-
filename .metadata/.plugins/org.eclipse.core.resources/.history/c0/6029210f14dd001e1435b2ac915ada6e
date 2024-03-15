@@ -1,0 +1,14 @@
+package com.saeyan.boardDTO;
+
+public class boardDTO {
+	
+	private int num;
+	private String name;
+	private String pwd;
+	private String email;
+	private String subject;
+	private String content;
+	private String ipaddr;
+	private String created;
+	private int htCount;
+}

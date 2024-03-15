@@ -1,0 +1,27 @@
+package com.saeyan.controller.action;
+
+public class ActionFactory {
+	
+	private static ActionFactory instance = new ActionFactory();
+	
+	private ActionFactory() {}
+	
+	public static ActionFactory getInstance() {
+		return instance;
+	}
+							//Board_list
+	public Action getAction(String command) {
+		Action action = null;
+		
+		System.out.println("ActionFactory :" + command);
+		
+		//조건식 나열 --> Action 구현 클래스
+		if(command.equals("board_list")) {
+			action = new BoardListAction();
+		}else if(command.equals("board_write_form")) {
+			action = new BoardWriteActionForm();
+		}
+		
+		return action;
+	}
+}

@@ -1,0 +1,19 @@
+package com.saeyan.controller.action;
+
+public class ActionFactory {
+	
+	private static ActionFactory instance = new ActionFactory();
+	
+	private ActionFactory() {
+	}
+	
+	public ActionFactory getInstance() {
+		return instance;
+	}
+	
+	public ActionFactory getAction(String command) {
+		Action action = null;
+		
+		return action;
+	}
+}

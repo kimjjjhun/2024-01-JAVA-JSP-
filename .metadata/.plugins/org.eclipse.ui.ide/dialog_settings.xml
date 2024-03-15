@@ -1,33 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<section name="NewWizardAction">
-		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.jdt.ui.wizards.JavaProjectWizard"/>
-		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
-			<item value="org.eclipse.jdt.ui.java"/>
-		</list>
-	</section>
-	<section name="SaveAsDialogSettings">
-		<item key="DIALOG_X_ORIGIN" value="250"/>
-		<item key="DIALOG_Y_ORIGIN" value="8"/>
-		<item key="DIALOG_WIDTH" value="525"/>
-		<item key="DIALOG_HEIGHT" value="580"/>
-		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
-	</section>
-	<section name="ChooseWorkspaceDialogSettings">
-		<item key="DIALOG_X_ORIGIN" value="259"/>
-		<item key="DIALOG_Y_ORIGIN" value="185"/>
-	</section>
-	<section name="WORKBENCH_SETTINGS">
-		<list key="ENABLED_TRANSFERS">
-		</list>
-	</section>
-	<section name="CleanDialogSettings">
-		<item key="BUILD_NOW" value="true"/>
-		<item key="BUILD_ALL" value="true"/>
-		<item key="TOGGLE_SELECTED" value="false"/>
-		<item key="DIALOG_WIDTH" value="500"/>
-		<item key="DIALOG_HEIGHT" value="467"/>
-		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
+	<section name="org.eclipse.ui.internal.views.markers.FiltersConfigurationDialog">
 	</section>
 	<section name="ExternalProjectImportWizard">
 		<item key="WizardProjectsImportPage.STORE_NESTED_PROJECTS" value="false"/>
@@ -36,31 +9,10 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
-			<item value="C:\java\works\Java_20240214_컬렉션[강사님]"/>
-			<item value="C:\java\works\Java_20240207_제네릭[강사님]"/>
-			<item value="C:\java\works\Java_20240206_정규표현식[강사님]"/>
-			<item value="C:\java\works\Java_20240206_유용한클래스[강사님]"/>
-			<item value="C:\java\works\Java_20240205_Exception[강사님]"/>
-			<item value="C:\java\works\Java_20240202_자바정석클래스[강사님]"/>
-			<item value="C:\java\works\Java_20240201_인터페이스[강사님]"/>
-			<item value="C:\java\works\Java_20240131_다형성[강사님]"/>
-			<item value="C:\java\works\Java_20240130_상속[강사님]"/>
-			<item value="C:\java\works\Java_20240129_클래스01[강사님]"/>
-			<item value="C:\java\works\Java_20240125_함수[강사님]"/>
-			<item value="C:\java\works\Java_20240125_배열과String[강사님]"/>
-			<item value="C:\java\works\Java_20240122_제어문[강사님]"/>
-			<item value="C:\java\works\Java_20240119_연산자[강사님]"/>
-			<item value="C:\java\works\BreakTime[강사님]"/>
-			<item value="C:\java\works\Java_20240216_영화예매[강사님]"/>
+			<item value="C:\java\Jsp\web-study-10"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
 			<item value=""/>
 		</list>
-	</section>
-	<section name="SmartImportWizard">
-		<item key="SmartImportRootWizardPage.STORE_HIDE_ALREADY_OPEN" value="false"/>
-		<item key="SmartImportRootWizardPage.STORE_CLOSE_IMPORTED" value="false"/>
-		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
-		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 	</section>
 </section>

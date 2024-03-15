@@ -1,0 +1,5 @@
+eclipse.preferences.version=1
+org.eclipse.wst.jsdt.internal.ui.javaeditor.JavaElementHyperlinkDetector=false
+org.eclipse.wst.jsdt.web.ui.JSDTHyperlinkDetector.HTML=false
+org.eclipse.wst.jsdt.web.ui.JSDTHyperlinkDetector.SCRIPT=false
+org.eclipse.wst.jsdt.web.ui.JSDTHyperlinkDetector.SCRIPT.events=false

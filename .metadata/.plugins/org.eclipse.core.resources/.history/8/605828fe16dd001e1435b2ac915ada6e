@@ -1,0 +1,72 @@
+package com.saeyan.boardDAO;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+import com.saeyan.boardDTO.boardDTO;
+import com.saeyan.dao.MemberDAO;
+
+public class boardDAO {
+
+	private static boardDAO instance = new boardDAO();
+	private Connection con = null;
+	private PreparedStatement pstmt = null;
+	private ResultSet rs = null;
+	private boardDAO() {
+	}
+	public static boardDAO getInstance() {
+		return instance;
+	}
+	public Connection getConnection() throws Exception {
+		String url = "jdbc:oracle:thin:@localhost:1521:xe";
+		String user = "ezen";
+		String password = "1234";
+		//1.드라이버로드
+		Class.forName("oracle.jdbc.driver.OracleDriver");
+		//2.DB연결
+		return DriverManager.getConnection(url,user,password);
+	}
+	public int getMaxNum() {
+		int maxNum = 0;
+		String sql =  "select nvl(max(num),0) from board";
+		
+		try {
+			//1.연결
+			con = getConnection();
+			
+			pstmt = con.prepareStatement(sql);
+			
+			rs= pstmt.executeQuery();
+			
+			if(rs.next()) {
+				maxNum = rs.getInt(1); 				
+				
+			}catch(Exception e) {
+				e.printStackTrace();
+			}finally {
+				try {
+					if(rs != null)rs.close();
+					if(pstmt != null)pstmt.close();
+					if(con != null)con.close();
+				}catch(Exception e) {
+					e.printStackTrace();
+				}
+			}
+			return maxNum;
+	}
+		public int insertData(boardDTO dto) {
+			int result = 0;
+			
+			PreparedStatement pstmt = null;
+			String sql;
+			
+			try {
+				sql = "insert into board (num,name,pwd,email,subject,";
+				sql += "content,ipAddr,hitCount,created) ";
+		        sql += "values (?,?,?,?,?,?,?,0,sysdate)";
+				
+			}
+		}
+}

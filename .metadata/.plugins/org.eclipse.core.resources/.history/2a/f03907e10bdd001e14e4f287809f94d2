@@ -1,0 +1,64 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+    .bulywood-color{
+      color:bulywood;
+    }
+    .center-text {
+        text-align: center;
+    }
+ </style>
+<script>
+var message = "<%= request.getAttribute("message") %>";
+if(message && message.trim() !== "" && message !== "null") {
+    alert(message);
+}
+</script>
+</head>
+<body>
+<form action="logout.do">
+	<table border="1">
+		<tr>
+			<td class="center-text"><p id="greeting" align="center"
+			><b>${loginUser.name}</b>님</p>반갑습니다.</td>
+		</tr>
+		 <tr class="button-container">
+			<td colspan="2">
+				<input type="submit" value="로그아웃">&nbsp;&nbsp;&nbsp;
+				<input type="button" value="회원정보수정" 
+				onclick="location.href='memberUpdate.do?userid=${loginUser.userid}'">
+				</tr>
+		 <tr class="button-container">
+		 	<td colspan="2">
+				<input type="button" value="작성게시글">&nbsp;
+				<input type="submit" value="회원탈퇴">
+				</td>
+				</tr>
+		 <tr class="button-container">
+		 	<td colspan="2">
+				<input type="button" value="찜목록">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="button" value="글쓰기">
+				</td>
+				</tr>
+		 <tr class="button-container">
+		 	<td colspan="2">
+				<input type="submit" value="문의하기">&nbsp;&nbsp;&nbsp;
+				</td>
+				</tr>
+	</table>
+</form>
+<script src="main.js"></script>
+<script>
+const pEl = document.querySelector("#greeting"); // 노드 선택
+// 1초마다 toggle 메서드 반복 실행
+setInterval(function(){
+  pEl.classList.toggle("red-color"); 
+},  1000);
+</script>
+</body>
+</html>

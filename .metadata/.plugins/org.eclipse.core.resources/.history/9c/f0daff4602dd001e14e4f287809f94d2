@@ -1,0 +1,13 @@
+<script>
+    var message = "<%= request.getAttribute("message") %>";
+    if(message && message.trim() !== "" && message !== "null") {
+        alert(message);
+    }
+</script>
+<script>
+    const pEl = document.querySelector("#text"); // 노드 선택
+    // 1초마다 toggle 메서드 반복 실행
+    setInterval(function(){
+      pEl.classList.toggle("red-color"); 
+    },  1000);
+  </script>

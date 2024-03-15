@@ -1,0 +1,66 @@
+<%@page import="java.net.URLEncoder"%>
+<%@page import="java.net.URLDecoder"%>
+<%@page import="java.sql.Connection"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+	request.setCharacterEncoding("UTF-8");
+	String cp = request.getContextPath();
+	
+	//BoardDAO dao = new BoardDAO(DBConn.getConnection());
+	
+	Connection con = DBConn.getConnection();
+	boardDAO dao = new boardDAO(con);
+	
+	MyUtil myUtil = new MyUtil();
+	//get방식으로 넘어온 페이지 번호MyUtil..
+	String pageNum = request.getParameter("pageNum");
+	
+	//첫 시작시 현재페이지 : 1
+	int currentPage = 1;
+	
+	//넘어온 페이지번호가 존재할 경우 현재페이지에 값 넣기
+	if(pagenum != null){
+		currentPage = Integer.parseInt(pageNum);
+	}
+	
+	//검색키 , 검색값
+	String searchKey = request.getParameter("searchKey");
+	String searchValue = request.getParameter("searchValue");
+	//검색값이 있을 경우
+	if(searchValue != null){
+		
+		if(request.getMethod().equalsIgnoreCase("GET")){
+			searchValue = URLDecoder.decode(searchValue, "utf-8");
+	//검색값이 없을 경우
+		}else {
+			searchKey = "subject";
+			searchValue = "";
+		}
+		
+		// 전체 데이터 갯수 구하기
+		int dataCount = dao.getDatacount(searchKey,searchValue);
+		//하나의 페이지에 표시할 데이터 갯수
+		int numPerPage = 3;
+		//전체 페이지 갯수
+		int totalPage = myUtil.getPageCount(numPerPage,dataCount);
+		//데이터를 삭제해서 페이지가 줄었을 때
+		if(currentPage > totalPage){
+			currentPage = totalPage;
+		}
+		//DB에서 가져올 데이터의 시작과 끝
+		int start = (currentPage-1)* numPerPage+1;
+		int end = currentPage * numPerPage;
+		//DB에서 해당 페이지를 가져옴
+		List<boardDTO> lists = dao.getLists(start,end,searchKey,searchValue);
+		//검색 - 검색기능을 사용할 경우 get방식의 주소에 추가로 적용
+		String param = "";
+		//null이 아니면 검색을 한 것이다.
+		if(!searchValue.equals("")){
+			//이때 주소를 만들어준다
+			param = "searchKey=" + searchKey;
+			param+= "&searchValue=" + URLEncoder.encode(searchValue,"utf-8");
+		}
+	}
+	
+%>
