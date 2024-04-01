@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+*{
+   margin:0;
+   padding:0;
+}
+
+section{
+   width:100%;
+   padding-top:150px; 
+   text-align: center;
+   background-color: #242424;
+}
+
+#poster input{
+   margin-right:20px;
+   margin-bottom : 20px;
+   display:inline-block;
+   width: 250px;
+   height: 450px;
+   border-radius: 5%;
+   transition : all 0.2s linear;
+}
+#poster input:hover{
+   transform:scale(1.1);
+}
+
+#page{
+   width:1850px;
+   margin-top:30px;
+   margin-bottom:30px;
+   display: block;
+   text-align: center;
+}
+
+#page a{
+   text-decoration:none;
+   size: 55px;
+   margin-right: 10px;
+   font-weight: bold;
+   font-size: 40px;
+}

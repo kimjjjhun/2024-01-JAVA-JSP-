@@ -1,0 +1,84 @@
+
+section{
+   padding: 150px;
+}
+
+#wrap {
+   width: 971px; /* 1024*768로 해상도를 맞추어서 설계 */
+   /* 가운데 정렬을 위한 바깥쪽 여백 설정 */
+   margin: 0 auto;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+#wrap h1 {
+   margin-top:30px;
+   margin-bottom:20px;
+   color: white; /* 글 색상 */
+}
+
+#wrap table {
+   width: 100%;
+   border-collapse: collapse;
+   font-size: 12px; /* 글꼴 크기 */
+   line-height: 24px; /* 줄 간격 */
+   background-color: white;
+   color:white;
+}
+
+#wrap table td,th {
+   border: #d3d3d3 solid 1px; /* 경계선 색상 스타일 굵기 */
+   padding: 5px; /* 안쪽 여백 */
+}
+
+#wrap table td {
+   background-color:#3c3c3c;
+   
+}
+
+
+#wrap th {
+   background: #ff0000; /* 배경색 */
+}
+
+#wrap img {
+   width: 220px; /* 이미지 너비(가로) */
+   height: 300px; /* 이미지 높이(세로) */
+}
+
+#wrap a {
+   text-decoration: none; /* 링크 밑줄 없애기 */
+   color: white; /* 글 색상 */
+}
+
+#wrap a:HOVER {
+   color: red; /* 글 색상 */
+}
+
+.id-input:focus {
+   outline: none;
+}
+
+#btn{
+    top: 1170px; /* 원하는 위치의 상단 여백 */
+    left: 1480px; /* 원하는 위치의 왼쪽 여백 */
+   margin-top:40px;
+    background-color: #fff;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    font-weight:bold;
+    width:90px;
+    height:30px;
+    
+}
+
+#btn:hover{
+     background-color: #A6A6A6;
+}
+
+#ownuser{
+   text-align: center;
+}

@@ -1,0 +1,45 @@
+@charset "utf-8";
+
+* {margin:0; padding:0;}
+
+body {
+    overflow: hidden;
+}
+
+ul, li, ol {list-style: none; margin:0; padding: 0;}
+
+a {text-decoration: none; color:#000;}
+
+/* 헤더 */
+header {position: fixed; left:0; top:0; width:100%; background-color: #000; z-index:1000;}
+
+.head {border-bottom:1px solid #eaeaea;}
+
+.headerWrap {max-width:1400px; margin: 0 auto; position: relative; width:100%;}
+
+
+.footer {
+    bottom: 0; /* 페이지의 아래쪽에 위치시킵니다. */
+    left: 0; /* 페이지의 왼쪽에 위치시킵니다. */
+    width: 100%; /* 페이지 전체 너비를 차지하도록 설정합니다. */
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: left;
+    height: 70px; /* 원하는 높이로 조절합니다. */
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column-reverse; /* 자식 요소들을 역순으로 배치 */
+}
+
+.footer li {
+    margin-bottom: 2px; /* 각 항목 사이의 간격을 조절합니다. */
+}
+
+.footer li:last-child {
+    margin-bottom: 0; /* 마지막 항목의 하단 여백을 없앱니다. */
+}
